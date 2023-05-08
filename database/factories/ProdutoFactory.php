@@ -27,7 +27,7 @@ class ProdutoFactory extends Factory
             'descricao' => fake()->paragraph(),
             'preco' => fake()->randomNumber(2),
             'slug' => Str::slug($nome),   // criar url amigavel
-            'imagem' => fake()->imageUrl(400, 400),
+            'imagem' => fake()->imageUrl($width = 400, $height = 400),
             'user_id' => User::all('id')->random(),
             'categoria_id' => Categoria::all('id')->random(),
         ];

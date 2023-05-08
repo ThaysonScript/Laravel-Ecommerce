@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ProdutoController::class, 'Index'])->name('produto.index');    // index
-Route::get('/produto/{id?}', [ProdutoController::class, 'show'])->name('produto.show');  // mostrar um produto pelo id passando pelo controller
+Route::get('/', [SiteController::class, 'Index'])->name('site.index');    // index
+Route::get('/produto/{slug}', [SiteController::class, 'detalhes'])->name('site.detalhes');  // mostrar um produto-slug pelo id passando pelo controller
