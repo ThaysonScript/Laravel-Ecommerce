@@ -15,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [SiteController::class, 'Index'])->name('site.index');    // index
-Route::get('/produto/{slug}', [SiteController::class, 'detalhes'])->name('site.detalhes');  // mostrar um produto-slug pelo id passando pelo controller
+Route::get('/', [SiteController::class, 'Index'])->name('site.index');    // index do site
+Route::get('/produto/{slug}', [SiteController::class, 'Detalhes'])->name('site.detalhes');  // mostrar mais informacoes do produto clicado e construir um uri/slug amigavel
+
+Route::get('/categorias/{id}', [SiteController::class, 'Categorias'])->name('site.categorias');
