@@ -22,14 +22,14 @@
             <li><a href="{{ route('site.categorias', $categoriaM->id) }}">{{ $categoriaM->nome }}</a></li>
         @endforeach
     </ul>
-
+    
     <nav class="red">
         <div class="nav-wrapper container">
           <a href="{{ route('site.index') }}" class="brand-logo center">CursoLaravel</a>
           <ul id="nav-mobile" class="left">
             <li><a href="{{ route('site.index') }}">Home</a></li>
             <li><a class='dropdown-trigger' href='#' data-target='dropdown1'>Categorias <i class="material-icons right">expand_more</i></a></li>
-            <li><a href="#">Carrinho</a></li>
+            <li><a href="{{ route('site.carrinho') }}">Carrinho</a></li>
           </ul>
         </div>
       </nav>

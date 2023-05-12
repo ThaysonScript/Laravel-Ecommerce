@@ -18,7 +18,7 @@ return new class extends Migration
             $table->decimal('preco', 10, 2);    // preco de produto tipo decima 10 numeros sendo 2 decimais
             $table->string('slug'); // slug do produto tipo string [ slug == tratamento de urls ]
             $table->string('imagem')->nullable();   // imagem do produto tipo string e podera ser vazia
-
+            
             // DEFININDO CHAVE ESTRANGEIRA
                 // maneira antiga
                     /*
